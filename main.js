@@ -10,10 +10,17 @@ form.addEventListener("submit", function (event) {
 
 function saveItens() {
   const shopItens = itensInput.value;
+  const checkDuplicate = itensList.some(
+    (element) => element.value.toUpperCase() === shopItens.toUpperCase()
+  );
 
-  itensList.push({
-    value: shopItens,
-  });
+  if (checkDuplicate) {
+    alert("This item already exist!");
+  } else {
+    itensList.push({
+      value: shopItens,
+    });
+  }
 
   console.log(itensList);
 }
