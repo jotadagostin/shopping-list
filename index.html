@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&family=Montserrat:ital,wght@0,300;1,200&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  </head>
+  <body class="has-text-grey hero">
+    <main
+      class="column is-7 hero-body is-offset-one-fifth is-unselectable"
+      class="has-text-centered">
+      <!-- Form starts here -->
+      <form id="id-itens">
+        <input
+          type="text"
+          class="input has-text-centered"
+          required
+          placeholder="Type the item you want to add"
+          id="receive-item" />
+        <button
+          for="save"
+          type="submit"
+          class="mt-2 has-text-weight-bold button is-small is-primary">
+          Save item
+        </button>
+      </form>
+      <!-- forms ends here -->
+
+      <!-- Div shopping list starts here -->
+      <div class="has-background-white mt-4">
+        <div>
+          <h2 class="has-text-link has-text-weight-bold is-size-4 ml-2">
+            Shopping List
+          </h2>
+          <ul class="mx-2 borda-lista" id="lista-de-itens"></ul>
+        </div>
+
+        <section class="pb-2">
+          <h2 class="has-text-link has-text-weight-bold is-size-4 ml-2">
+            Purchased
+          </h2>
+          <ul class="mx-2 border-list" id="purchased-itens"></ul>
+        </section>
+      </div>
+      <!-- Div shopping list ends here -->
+
+      <footer class="has-text-centered has-text-white has-text-weight-bold">
+        Developed by Alura.
+      </footer>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
