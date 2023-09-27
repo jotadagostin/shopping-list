@@ -40,4 +40,11 @@ function showItem() {
     </div>
 </li>`;
   });
+  const inputsCheck = document.querySelectorAll('input[type="checkbox"]');
+
+  inputsCheck.forEach((i) => {
+    i.addEventListener("click", (event) => {
+      console.log("I was clicked!");
+    });
+  });
 }
