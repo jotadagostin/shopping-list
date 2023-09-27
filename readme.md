@@ -16,7 +16,7 @@ Model code for the "Purchased" li:
 
     Model code for the "Shopping list" li:
 
-     <li class="item-compra is-flex is-justify-content-space-between" data-value="">
+     <li class="buy-item is-flex is-justify-content-space-between" data-value="">
         <div>
             <input type="checkbox" class="is-clickable" />
             <input type="text" class="is-size-5" value=""></input>
