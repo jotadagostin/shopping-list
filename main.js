@@ -21,6 +21,7 @@ function saveItens() {
   } else {
     itensList.push({
       value: shopItens,
+      check: false
     });
   }
 
@@ -44,7 +45,9 @@ function showItem() {
 
   inputsCheck.forEach((i) => {
     i.addEventListener("click", (event) => {
-      console.log("I was clicked!");
+     const elementValue = event.target.parentElement.parentElement.getAttribute("data-value")
+     itensList[elementValue].check = event.target.checked
+     console.log(itensList[elementValue].check);
     });
   });
 }
