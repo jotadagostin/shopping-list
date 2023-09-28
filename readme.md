@@ -32,5 +32,6 @@ Model code for the "Purchased" li:
         <span class="itens-comprados is-size-5">${elemento.valor}</span>
     </div>
 
-    Ícones de edição:
-     <i class="fa-regular fa-floppy-disk is-clickable"></i><i class="fa-regular is-clickable fa-pen-to-square editar"></i>
+    Edition Icons:
+    
+     <i class="fa-regular fa-floppy-disk is-clickable"></i><i class="fa-regular is-clickable fa-pen-to-square edit"></i>

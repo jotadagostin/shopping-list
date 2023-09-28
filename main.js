@@ -1,4 +1,5 @@
 let itensList = [];
+let editItemA;
 
 const form = document.getElementById("form-itens");
 const itensInput = document.getElementById("receive-item");
@@ -54,7 +55,9 @@ function showItem() {
           <input type="text" class="is-size-5" value="${element.value}"></input>
       </div>
       <div>
-          <i class="fa-solid fa-trash is-clickable delet"></i>
+        <button onclick="saveEdition()"><i class="fa-regular fa-floppy-disk is-clickable"></i></button><i class="fa-regular is-clickable fa-pen-to-square edit"></i>
+        <i class="fa-solid fa-trash is-clickable delet"></i>
+
       </div>
      </li>`;
     }
@@ -80,4 +83,25 @@ function showItem() {
       showItem();
     });
   });
+
+  const editItens = document.querySelectorAll(".edit");
+
+  editItens.forEach((i) => {
+    i.addEventListener("click", (event) => {
+      editItemA =
+        event.target.parentElement.parentElement.getAttribute("data-value");
+      showItem();
+    });
+  });
+}
+
+function saveEdition() {
+  const editedtItem = document.querySelector(
+    `[data-value="${editItemA}"] input[type="text"]`
+  );
+  // console.log(editedtItem.value);
+  itensList[editItemA].value = editedtItem.value;
+  console.log(itensList);
+  editItemA = -1;
+  showItem();
 }
