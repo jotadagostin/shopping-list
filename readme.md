@@ -10,7 +10,7 @@ Model code for the "Purchased" li:
             <span class="itens-comprados is-size-5"></span>
         </div>
         <div>
-            <i class="fa-solid fa-trash is-clickable deletar"></i>
+            <i class="fa-solid fa-trash is-clickable delete"></i>
         </div>
     </li>
 
@@ -22,7 +22,7 @@ Model code for the "Purchased" li:
             <input type="text" class="is-size-5" value=""></input>
         </div>
         <div>
-            <i class="fa-solid fa-trash is-clickable deletar"></i>
+            <i class="fa-solid fa-trash is-clickable delete"></i>
         </div>
     </li>
 

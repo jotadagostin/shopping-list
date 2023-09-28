@@ -43,7 +43,7 @@ function showItem() {
           <span class="purchased-itens is-size-5">${element.value}</span>
       </div>
       <div>
-          <i class="fa-solid fa-trash is-clickable deletar"></i>
+          <i class="fa-solid fa-trash is-clickable delet"></i>
       </div>
   </li>
       `;
@@ -54,7 +54,7 @@ function showItem() {
           <input type="text" class="is-size-5" value="${element.value}"></input>
       </div>
       <div>
-          <i class="fa-solid fa-trash is-clickable deletar"></i>
+          <i class="fa-solid fa-trash is-clickable delet"></i>
       </div>
      </li>`;
     }
@@ -66,6 +66,17 @@ function showItem() {
       const elementValue =
         event.target.parentElement.parentElement.getAttribute("data-value");
       itensList[elementValue].check = event.target.checked;
+      showItem();
+    });
+  });
+
+  const deleteObjects = document.querySelectorAll(".delet");
+
+  deleteObjects.forEach((i) => {
+    i.addEventListener("click", (event) => {
+      const elementValue =
+        event.target.parentElement.parentElement.getAttribute("data-value");
+      itensList.splice(elementValue, 1);
       showItem();
     });
   });
