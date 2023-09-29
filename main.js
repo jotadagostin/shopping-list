@@ -52,10 +52,13 @@ function showItem() {
       ulItens.innerHTML += ` <li class="buy-item is-flex is-justify-content-space-between" data-value="${index}">
       <div>
           <input type="checkbox" class="is-clickable" />
-          <input type="text" class="is-size-5" value="${element.value}"></input>
+          <input type="text" class="is-size-5" value="${element.value}" ${
+        index !== Number(editItemA) ? "disabled" : ""
+      }></input>
       </div>
+
       <div>
-        <button onclick="saveEdition()"><i class="fa-regular fa-floppy-disk is-clickable"></i></button><i class="fa-regular is-clickable fa-pen-to-square edit"></i>
+        ${index === Number(editItemA) ? '<button onclick="saveEdition()"><i class="fa-regular fa-floppy-disk is-clickable"></i></button>' : '<i class="fa-regular is-clickable fa-pen-to-square edit"></i>'}
         <i class="fa-solid fa-trash is-clickable delet"></i>
 
       </div>
