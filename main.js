@@ -6,6 +6,10 @@ const itensInput = document.getElementById("receive-item");
 const ulItens = document.getElementById("itens-list");
 const ulPurchasedItems = document.getElementById("purchased-itens");
 
+function updateLocalStorage() {
+  localStorage.setItem("itensList", JSON.stringify(itensList));
+}
+
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   saveItens();
@@ -58,7 +62,11 @@ function showItem() {
       </div>
 
       <div>
-        ${index === Number(editItemA) ? '<button onclick="saveEdition()"><i class="fa-regular fa-floppy-disk is-clickable"></i></button>' : '<i class="fa-regular is-clickable fa-pen-to-square edit"></i>'}
+        ${
+          index === Number(editItemA)
+            ? '<button onclick="saveEdition()"><i class="fa-regular fa-floppy-disk is-clickable"></i></button>'
+            : '<i class="fa-regular is-clickable fa-pen-to-square edit"></i>'
+        }
         <i class="fa-solid fa-trash is-clickable delet"></i>
 
       </div>
@@ -96,6 +104,8 @@ function showItem() {
       showItem();
     });
   });
+
+  updateLocalStorage();
 }
 
 function saveEdition() {
