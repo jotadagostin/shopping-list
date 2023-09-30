@@ -5,9 +5,17 @@ const form = document.getElementById("form-itens");
 const itensInput = document.getElementById("receive-item");
 const ulItens = document.getElementById("itens-list");
 const ulPurchasedItems = document.getElementById("purchased-itens");
+const recoveredList = localStorage.getItem("itensList");
 
 function updateLocalStorage() {
   localStorage.setItem("itensList", JSON.stringify(itensList));
+}
+
+if (recoveredList) {
+  itensList = JSON.parse(recoveredList);
+  showItem();
+} else {
+  itensList = [];
 }
 
 form.addEventListener("submit", function (event) {
